@@ -15,7 +15,7 @@ public class Morpion
     static boolean jeux= false;
     static char symbol='X';
     static String joueur1;
-    static  String joueur2;
+    static String joueur2;
 
 
     public static void main (String[] args)
@@ -57,12 +57,23 @@ public class Morpion
                 joueur=1;
             }
         }
-		/*Scanner scanneur=new Scanner(System.in);
+		Scanner scanneur=new Scanner(System.in);
 		System.out.println ("Voulez-vous rejouer ? (1 pour oui/ 0 pour non)");
 		int rejouer=scanneur.nextInt();
 		if (rejouer == 1){
+            cel1 = '1';
+            cel2 = '2';
+            cel3 = '3';
+            cel4 = '4';
+            cel5 = '5';
+            cel6 = '6';
+            cel7 = '7';
+            cel8 = '8';
+            cel9 = '9';
+            joueur = 1;
+		    jeux=false;
 			morpion();
-		}*/
+		}
 
     }
 
