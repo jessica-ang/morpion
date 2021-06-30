@@ -14,6 +14,8 @@ public class Morpion
     static int joueur=1;
     static boolean jeux= false;
     static char symbol='X';
+    static String joueur1;
+    static  String joueur2;
 
 
     public static void main (String[] args)
@@ -26,8 +28,19 @@ public class Morpion
     {
         System.out.println("Bonjour ! \nJouons au Morpion :");
         afficher();
-        String joueur1=nomJoueur(1);
-        String joueur2=nomJoueur(0);
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Jeux contre l'ia ? (2 pour ia contre ia, 1 pour joueur contre ia et 0 pour joueur contre joueur)");
+        int ia=scan.nextInt();
+        if (ia==0) {
+            joueur1 = nomJoueur(1);
+            joueur2 = nomJoueur(0);
+        }else if (ia==1){
+            joueur1 = nomJoueur(1);
+            joueur2 = "ia2";
+        }else {
+            joueur1 = "ia1";
+            joueur2 ="ia2";
+        }
         //boucle de jeux
         while (!jeux){
             if (joueur==1){
@@ -44,10 +57,10 @@ public class Morpion
                 joueur=1;
             }
         }
-		/*Scanner scan=new Scanner(System.in);
-		System.out.println ("Voulez-vous rejouer ? (oui/non)");
-		String rejouer=scan.nextLine();
-		if (rejouer == "oui"){
+		/*Scanner scanneur=new Scanner(System.in);
+		System.out.println ("Voulez-vous rejouer ? (1 pour oui/ 0 pour non)");
+		int rejouer=scanneur.nextInt();
+		if (rejouer == 1){
 			morpion();
 		}*/
 
@@ -70,13 +83,21 @@ public class Morpion
         }else{
             symbol='O';
         }
-        //scanneur choix case
-        Scanner scan=new Scanner(System.in);
-        System.out.println("Quel case choisis-tu "+ nomJoueur+ "?");
+        int choix;
+        if (nomJoueur=="ia1" || nomJoueur=="ia2"){
+            choix= (int) (Math.random()*9+1);
+            System.out.println("L'ia a choisit la case "+choix );
+        }else {
+            //scanneur choix case
+            Scanner scan=new Scanner(System.in);
+            System.out.println("Quel case choisis-tu "+ nomJoueur+ "?");
+            choix=scan.nextInt();
+            scan.nextLine();
+        }
+
 
         boolean erreur =false;
-        int choix=scan.nextInt();
-        scan.nextLine();
+
         //si de choix de cellule
         switch (choix){
             case 1:
