@@ -1,25 +1,33 @@
 public class Exo2 {
     public static void main(String[] args) {
+        System.out.println("fonction estMajeur");
         System.out.println(estMajeur(18));
         System.out.println(estMajeur(5));
-        System.out.println(signe(-5));
-        System.out.println(signe(5));
-        System.out.println(signe(0));
-        System.out.println(plusGrand2(5, 8));
-        System.out.println(plusGrand2(8, 5));
-        System.out.println(plusPetit2(5, 8));
-        System.out.println(plusPetit2(8, 5));
-        System.out.println(plusPetit3(5, 8, 2));
-        System.out.println(plusPetit3(8, 5, 10));
-        System.out.println(plusPetit3(3, 5, 10));
-        System.out.println(plusGrand3(5, 18, 2));
-        System.out.println(plusGrand3(8, 5, 10));
-        System.out.println(plusGrand3(13, 5, 10));
-        System.out.println(positifOuPas(13, 5, 10));
-        System.out.println(positifOuPas(13, 5, -10));
-        System.out.println(positifOuPas(-13, -5, -10));
-        System.out.println(positifOuPas(13, -5, 10));
-        System.out.println(positifOuPas(-13, 5, 10));
+        System.out.println("fonction signe");
+        System.out.println(MesMaths.signe(-5));
+        System.out.println(MesMaths.signe(5));
+        System.out.println(MesMaths.signe(0));
+        System.out.println("fonction plusGrand2");
+        System.out.println(MesMaths.plusGrand2(5, 8));
+        System.out.println(MesMaths.plusGrand2(8, 5));
+        System.out.println("fonction plusPetit2");
+        System.out.println(MesMaths.plusPetit2(5, 8));
+        System.out.println(MesMaths.plusPetit2(8, 5));
+        System.out.println("fonction plusPetit3");
+        System.out.println(MesMaths.plusPetit3(5, 8, 2));
+        System.out.println(MesMaths.plusPetit3(8, 5, 10));
+        System.out.println(MesMaths.plusPetit3(3, 5, 10));
+        System.out.println("fonction plusGrand3");
+        System.out.println(MesMaths.plusGrand3(5, 18, 2));
+        System.out.println(MesMaths.plusGrand3(8, 5, 10));
+        System.out.println(MesMaths.plusGrand3(13, 5, 10));
+        System.out.println("fonction positifOuPas");
+        System.out.println(MesMaths.positifOuPas(13, 5, 10));
+        System.out.println(MesMaths.positifOuPas(13, 5, -10));
+        System.out.println(MesMaths.positifOuPas(-13, -5, -10));
+        System.out.println(MesMaths.positifOuPas(13, -5, 10));
+        System.out.println(MesMaths.positifOuPas(-13, 5, 10));
+        System.out.println("fonction quelPermis");
         quelPermis(5);
         quelPermis(10);
         quelPermis(16);
@@ -27,6 +35,7 @@ public class Exo2 {
         quelPermis(18);
         quelPermis(19);
         quelPermis(80);
+        System.out.println("fonction capital");
         System.out.println(capital("France"));
         System.out.println(capital("Allemagne"));
         System.out.println(capital("Italie"));
@@ -47,79 +56,7 @@ public class Exo2 {
         return age >= 18;
     }
 
-    public  static String signe (int reel)
-    {
-        /* Version longue
-        if (reel == 0){
-            return "nul";
-        } else if (reel>0){
-            return "positif";
-        }else{
-            return "negatif";
-        }
-        Version courte*/
-        return reel>0 ? "positif": (reel<0 ? "negatif":"nul") ;
-    }
 
-    public static int plusGrand2 (int nb1, int nb2)
-    {
-        /*if (nb1>nb2){
-            return nb1;
-        } else {
-            return nb2;
-        }*/
-        return nb1>nb2 ? nb1:nb2;
-    }
-
-    public static int plusPetit2 (int nb1, int nb2)
-    {
-        /*if (nb1<=nb2){
-            return nb1;
-        } else {
-            return nb2;
-        }
-        version math
-        return Math.min(nb1, nb2);
-        */
-        return nb1<=nb2 ? nb1:nb2;
-
-
-    }
-
-    public static int plusPetit3 (int nb1, int nb2, int nb3)
-    {
-        /*if (nb1<=nb2 && nb1<=nb3){
-            return nb1;
-        } else if (nb2<=nb3){
-            return nb2;
-        } else {
-            return nb3;
-        }*/
-        return plusPetit2( plusPetit2(nb1,nb2),nb3);
-    }
-
-
-    public static int plusGrand3 (int nb1, int nb2, int nb3)
-    {
-        /*if (nb1>nb2 && nb1>nb3){
-            return nb1;
-        } else if (nb2>nb3){
-            return nb2;
-        } else {
-            return nb3;
-        }*/
-        return plusGrand2(plusGrand2(nb1,nb2),nb3);
-    }
-
-    public static boolean positifOuPas (int nb1, int nb2, int nb3)
-    {
-        /*if (nb1<0 || nb2<0 || nb3<0){
-            return false;
-        } else {
-            return true;
-        }*/
-        return (nb1>=0 || nb2>=0 || nb3>=0);
-    }
 
     public static void quelPermis (int age)
     {
