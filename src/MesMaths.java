@@ -21,8 +21,9 @@ public class MesMaths {
             return nb1;
         } else {
             return nb2;
-        }*/
-        return nb1>nb2 ? nb1:nb2;
+        }
+        return nb1>nb2 ? nb1:nb2;*/
+        return Math.max(nb1, nb2);
     }
 
     public static int plusPetit2 (int nb1, int nb2)
@@ -32,12 +33,10 @@ public class MesMaths {
         } else {
             return nb2;
         }
-        version math
-        return Math.min(nb1, nb2);
-        */
         return nb1<=nb2 ? nb1:nb2;
-
-
+        version math
+        */
+        return Math.min(nb1, nb2);
     }
 
     public static int plusPetit3 (int nb1, int nb2, int nb3)
@@ -74,5 +73,49 @@ public class MesMaths {
         }*/
         return (nb1>=0 || nb2>=0 || nb3>=0);
     }
+
+    public static void multiplicationFor (int nb1)
+    {
+        for (int i=1; i<16;i++){
+            System.out.println(nb1+ " x "+i+" = "+nb1*i);
+        }
+    }
+
+    public static void multiplicationWhile (int nb1)
+    {
+        int i=1;
+        while (i<16){
+            System.out.println(nb1+ " x "+i+" = "+nb1*i);
+            i++;
+        }
+    }
+
+    public  static void multiplicationDo (int nb1)
+    {
+        int i=1;
+        do {
+            System.out.println(nb1 + " x " + i + " = " + nb1 * i);
+            i++;
+        }
+        while (i<16);
+    }
+
+    /*public static void infini ()
+    {
+        // avec boucle for
+        for (int i=1; ;i++) {
+            System.out.println(i);
+        }
+        //avec boucle while
+        int i=1;
+        while (true){
+            System.out.println(i);
+        }
+        //avec boucle do... while
+        int i=1;
+        do {
+            System.out.println(i);
+        } while (true);
+    }*/
 
 }

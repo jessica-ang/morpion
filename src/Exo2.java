@@ -1,6 +1,6 @@
 public class Exo2 {
     public static void main(String[] args) {
-        System.out.println("fonction estMajeur");
+        /*System.out.println("fonction estMajeur");
         System.out.println(estMajeur(18));
         System.out.println(estMajeur(5));
         System.out.println("fonction signe");
@@ -41,6 +41,26 @@ public class Exo2 {
         System.out.println(capital("Italie"));
         System.out.println(capital("Angleterre"));
         System.out.println(capital("Brésil"));
+        MesMaths.multiplicationFor(5);
+        MesMaths.multiplicationWhile(5);
+        MesMaths.multiplicationDo(5);
+        MesMots.sansE("J'aimE les omelettes sans e");
+        MesMots.nbA("J'aime les omelettes sAns e");
+        MesMots.envers("toto");
+        MesMots.majuscule("J'aime Les Majuscules avec un Grand M");
+        MesMots.sansVoyelle("Les chaussettes de archiduchesse");
+        MesMots.sansMaj("J'aime Les Majuscules avec un Grand M");
+        MesMots.grandChara("le plus grand character c'est moi");
+        MesMots.espaceAvant("    Espace");
+        MesMots.sansEspace("     Geant         ");*/
+        int[] tab;
+        tab=new int[10];
+        arrayUtils.fillTab(tab);
+        arrayUtils.printTab(tab);
+        System.out.println();
+        System.out.println("le nombre max est "+arrayUtils.getMax(tab));
+        arrayUtils.permute(tab,0,9);
+        System.out.println("i="+tab[0]+" et j="+tab[9]);
 
     }
 
