@@ -30,6 +30,73 @@ public class arrayUtils {
         tab[j]=temp;
     }
 
+    // Retourne la somme
+    public static int sum (int[] tab)
+    {
+        int result=0;
+        for (int indice=0; indice< tab.length;indice++) {
+        result+=tab[indice];
+        }
+        return result;
+    }
+
+    // Retourne la moyenne
+    public static int average (int[] tab)
+    {
+        return sum(tab)/tab.length;
+    }
+    // Affiche les valeurs supérieurs à la moyenne (ne retourne rien)
+    public static void higherAverage (int[] tab){
+        int resultAverage=average(tab);
+        System.out.print("Les nombres supérieurs a la moyenne ("+resultAverage+"): ");
+        for (int indice=0; indice< tab.length;indice++){
+            if (resultAverage<tab[indice]) {
+                System.out.print(tab[indice]+" ;");
+            }
+        }
+
+    }
+    //Retourne le nombre d’occurrence de la valeur maximum (Version O(2n) et O(n))
+    public static int nbMax(int[]tab)
+    {
+        int max=getMax(tab);
+        int result=0;
+        for (int indice=0; indice< tab.length;indice++){
+            if (max==tab[indice]){
+                result++;
+            }
+        }
+        return result;
+    }
+    /** Crée et retourne un nouveau tableau qui est la concaténation des 2 tableaux **/
+    public static int[] fusion(int[]tab1, int[] tab2) {
+        int[] tab3;
+        if (tab1.length>=tab2.length){
+            tab3=new int[tab1.length];
+            for (int indice=0; indice< tab2.length;indice++){
+                tab3[indice]=tab1[indice]+tab2[indice];
+            }
+            for(int indice= tab2.length-1;indice<tab1.length;indice++){
+                tab3[indice]=tab1[indice];
+            }
+        } else{
+            tab3=new int[tab2.length];
+            for (int indice=0; indice< tab1.length;indice++){
+                tab3[indice]=tab1[indice]+tab2[indice];
+            }
+            for(int indice= tab1.length-1;indice<tab2.length;indice++){
+                tab3[indice]=tab2[indice];
+            }
+        }
+
+        return tab3;
+    }
+
+
+
+
+
+
 
 
 

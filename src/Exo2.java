@@ -55,13 +55,23 @@ public class Exo2 {
         MesMots.sansEspace("     Geant         ");*/
         int[] tab;
         tab=new int[10];
+        int[] tab2;
+        tab2=new int[11];
         arrayUtils.fillTab(tab);
+        arrayUtils.fillTab(tab2);
         arrayUtils.printTab(tab);
+        System.out.println();
+        arrayUtils.printTab(tab2);
         System.out.println();
         System.out.println("le nombre max est "+arrayUtils.getMax(tab));
         arrayUtils.permute(tab,0,9);
         System.out.println("i="+tab[0]+" et j="+tab[9]);
-
+        System.out.println(arrayUtils.sum(tab));
+        System.out.println(arrayUtils.average(tab));
+        arrayUtils.higherAverage(tab);
+        System.out.println();
+        System.out.println("le nombre max "+arrayUtils.getMax(tab)+" apparait "+arrayUtils.nbMax(tab)+" fois.");
+        arrayUtils.printTab(arrayUtils.fusion(tab,tab2));
     }
 
     public static boolean estMajeur (int age)
