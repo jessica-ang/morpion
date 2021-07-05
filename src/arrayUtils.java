@@ -9,8 +9,9 @@ public class arrayUtils {
     /** Affiche le tableau dans la console sur 1 seule ligne */
     public static void printTab(int[] tab) {
         for (int indice=0; indice< tab.length;indice++){
-            System.out.print(tab[indice]+";");
+            System.out.print(tab[indice]+" - ");
         }
+        System.out.println();
     }
     /** Retourne la valeur maximum du tableau */
     public static int getMax(int[] tab) {
@@ -76,7 +77,7 @@ public class arrayUtils {
             for (int indice=0; indice< tab2.length;indice++){
                 tab3[indice]=tab1[indice]+tab2[indice];
             }
-            for(int indice= tab2.length-1;indice<tab1.length;indice++){
+            for(int indice= tab2.length;indice<tab1.length;indice++){
                 tab3[indice]=tab1[indice];
             }
         } else{
@@ -84,7 +85,7 @@ public class arrayUtils {
             for (int indice=0; indice< tab1.length;indice++){
                 tab3[indice]=tab1[indice]+tab2[indice];
             }
-            for(int indice= tab1.length-1;indice<tab2.length;indice++){
+            for(int indice= tab1.length;indice<tab2.length;indice++){
                 tab3[indice]=tab2[indice];
             }
         }
@@ -92,7 +93,26 @@ public class arrayUtils {
         return tab3;
     }
 
+    /** Retourne un tableau avec une nouvelle valeur ajoutée **/
+    public static int[] add(int[] pTab, int pValeurNouvelle) {
+        int[] tab2;
+        tab2 = new int[pTab.length+1];
+        for (int i=0;i< pTab.length;i++){
+            tab2[i]=pTab[i];
+        }
+        tab2[tab2.length-1]= pValeurNouvelle;
+        return tab2;
+    }
+    /** Supprime un élément du tableau **/
+    public static int[] remove(int[] pTab, int pIndiceASupprimer) {
+        int[] newTab;
+        newTab = new int[pTab.length-1];
+        for (int i=pIndiceASupprimer;i<pTab.length-1;i++){
+            newTab[i]=pTab[i+1];
+        }
+        return newTab;
 
+    }
 
 
 

@@ -62,7 +62,6 @@ public class Exo2 {
         arrayUtils.printTab(tab);
         System.out.println();
         arrayUtils.printTab(tab2);
-        System.out.println();
         System.out.println("le nombre max est "+arrayUtils.getMax(tab));
         arrayUtils.permute(tab,0,9);
         System.out.println("i="+tab[0]+" et j="+tab[9]);
@@ -72,6 +71,8 @@ public class Exo2 {
         System.out.println();
         System.out.println("le nombre max "+arrayUtils.getMax(tab)+" apparait "+arrayUtils.nbMax(tab)+" fois.");
         arrayUtils.printTab(arrayUtils.fusion(tab,tab2));
+        arrayUtils.printTab(arrayUtils.add(tab,45));
+        arrayUtils.printTab(arrayUtils.remove(tab,0));
     }
 
     public static boolean estMajeur (int age)
