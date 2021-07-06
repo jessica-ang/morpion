@@ -72,7 +72,7 @@ public class Exo2 {
         System.out.println("le nombre max "+arrayUtils.getMax(tab)+" apparait "+arrayUtils.nbMax(tab)+" fois.");
         arrayUtils.printTab(arrayUtils.fusion(tab,tab2));
         arrayUtils.printTab(arrayUtils.add(tab,45));
-        arrayUtils.printTab(arrayUtils.remove(tab,0));
+        arrayUtils.printTab(arrayUtils.remove(tab,5));
     }
 
     public static boolean estMajeur (int age)

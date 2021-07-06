@@ -214,7 +214,6 @@ public class Morpion
             System.out.print("Quel est ton nom, joueur 2 ? ");
         }
 
-
         String nom=scan.nextLine();
         return nom;
     }

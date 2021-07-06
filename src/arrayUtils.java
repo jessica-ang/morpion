@@ -107,10 +107,14 @@ public class arrayUtils {
     public static int[] remove(int[] pTab, int pIndiceASupprimer) {
         int[] newTab;
         newTab = new int[pTab.length-1];
+        for (int i=0;i<pIndiceASupprimer;i++){
+            newTab[i]=pTab[i];
+        }
         for (int i=pIndiceASupprimer;i<pTab.length-1;i++){
             newTab[i]=pTab[i+1];
         }
         return newTab;
+
 
     }
 
